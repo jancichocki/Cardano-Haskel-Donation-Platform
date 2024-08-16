@@ -1,0 +1,30 @@
+cabal-version:       2.4
+name:                Haskel
+version:             0.1.0.0
+category:            Web
+license:             MIT
+license-file:        LICENSE
+author:              Jan Cichocki
+maintainer:          jan@cichocki.com
+build-type:          Simple
+extra-doc-files:     CHANGELOG.md
+extra-source-files:  README.md
+
+executable Haskel
+  main-is: Main.hs
+  other-modules:
+    User, Donation, SmartContract, Dashboard, DonationType, AuditTrail
+  build-depends:
+    base >=4.7 && <5,
+    cardano-wallet,
+    cardano-api,
+    random,
+    text,
+    time,
+    aeson,
+    bytestring,
+    containers,
+    directory,
+    filepath
+  hs-source-dirs: src
+  default-language: Haskell2010
